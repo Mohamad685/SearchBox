@@ -47,9 +47,9 @@ function App() {
 			return text
 		};
 
-		const searchValue = searchBox.toLowerCase()
-		const parts = text.toLowerCase().split(searchValue)
-		const lastIndex = parts.length - 1
+		const searchValue = searchBox.toLowerCase();
+		const parts = text.toLowerCase().split(searchValue);
+		const lastIndex = parts.length - 1;
 
     return parts.map((part, index) => (
 			<React.Fragment key={index}>
