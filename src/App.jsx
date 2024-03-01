@@ -31,8 +31,8 @@ function App() {
 				article.title.toLowerCase() + " " + article.content.toLowerCase()
 			return acc + lowerCaseText.split(searchValue).length - 1
 		}, 0);
-		setFoundWordsCount(wordCount);
-	};
+		setFoundWordsCount(wordCount)
+	}
 
 	const clearSearch = () => {
 		setSearchBox("")
