@@ -24,18 +24,18 @@ function App() {
 				lowerCaseContent.includes(searchValue)
 			);
 		});
-		setSearchResults(newArticles)
+		setSearchResults(newArticles);
 
 		const wordCount = newArticles.reduce((acc, article) => {
 			const lowerCaseText =
 				article.title.toLowerCase() + " " + article.content.toLowerCase()
 			return acc + lowerCaseText.split(searchValue).length - 1
 		}, 0);
-		setFoundWordsCount(wordCount)
-	}
+		setFoundWordsCount(wordCount);
+	};
 
 	const clearSearch = () => {
-		setSearchBox("")
+		setSearchBox("");
 		setSearchResults(articles);
 		setFoundWordsCount(0);
 	};
@@ -45,7 +45,7 @@ function App() {
 	const highlight = (text) => {
 		if (!searchBox) {
 			return text
-		}
+		};
 
 		const searchValue = searchBox.toLowerCase()
 		const parts = text.toLowerCase().split(searchValue)
